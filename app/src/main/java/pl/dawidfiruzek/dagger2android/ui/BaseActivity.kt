@@ -28,11 +28,12 @@ abstract class BaseActivity<P : BaseContract.Presenter> : AppCompatActivity(), H
         presenter.viewCreated()
     }
 
-    override fun supportFragmentInjector(): AndroidInjector<Fragment> =
-            fragmentInjector
-
+    @CallSuper
     override fun onDestroy() {
         super.onDestroy()
         presenter.viewDestroyed()
     }
+
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> =
+            fragmentInjector
 }
