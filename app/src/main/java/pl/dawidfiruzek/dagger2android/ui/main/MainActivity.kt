@@ -1,8 +1,8 @@
 package pl.dawidfiruzek.dagger2android.ui.main
 
-import android.app.FragmentManager
 import android.content.res.Resources
 import android.os.Bundle
+import android.support.v4.app.FragmentManager
 import android.util.Log
 import pl.dawidfiruzek.dagger2android.R
 import pl.dawidfiruzek.dagger2android.ui.BaseActivity
@@ -23,5 +23,7 @@ class MainActivity : BaseActivity() {
 
         Log.e("Test injection", fm.toString())
         Log.e("Test injection", res.toString())
+
+        fm.beginTransaction().replace(R.id.main_root, MainFragment()).commit()
     }
 }

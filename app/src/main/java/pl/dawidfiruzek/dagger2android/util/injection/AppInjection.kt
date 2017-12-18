@@ -12,7 +12,9 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
 import pl.dawidfiruzek.dagger2android.App
 import pl.dawidfiruzek.dagger2android.ui.BaseActivity
+import pl.dawidfiruzek.dagger2android.ui.BaseFragment
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
+import pl.dawidfiruzek.dagger2android.ui.main.MainFragment
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 import javax.inject.Singleton
 
@@ -29,7 +31,7 @@ class AppModule(private val application: Application) {
 }
 
 @Singleton
-@Component(modules = [AndroidInjectionModule::class, AppModule::class, ActivityBuilderModule::class])
+@Component(modules = [AndroidInjectionModule::class, AppModule::class, ActivityBuilderModule::class, FragmentBuilderModule::class])
 interface AppComponent {
 
     @Component.Builder
@@ -54,4 +56,14 @@ abstract class ActivityBuilderModule {
 
     @ContributesAndroidInjector(modules = [SecondActivityModule::class])
     abstract fun bindSecondActivity(): SecondActivity
+}
+
+@Module
+abstract class FragmentBuilderModule {
+
+    @Binds
+    abstract fun fragment(fragment: BaseFragment): BaseFragment
+
+    @ContributesAndroidInjector(modules = [MainFragmentModule::class])
+    abstract fun mainFragment(): MainFragment
 }
