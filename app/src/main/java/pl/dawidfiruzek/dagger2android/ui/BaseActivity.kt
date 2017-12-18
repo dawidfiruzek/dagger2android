@@ -10,10 +10,13 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
 
-abstract class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector {
+abstract class BaseActivity<P : BaseContract.Presenter> : AppCompatActivity(), HasSupportFragmentInjector {
 
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
+
+    @Inject
+    lateinit var presenter: P
 
     abstract val layoutId: Int
 
@@ -22,8 +25,14 @@ abstract class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
+        presenter.viewCreated()
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
             fragmentInjector
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.viewDestroyed()
+    }
 }

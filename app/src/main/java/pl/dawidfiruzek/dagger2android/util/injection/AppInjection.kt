@@ -2,7 +2,8 @@ package pl.dawidfiruzek.dagger2android.util.injection
 
 import android.app.Application
 import android.content.Context
-import android.content.res.Resources
+import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import dagger.Binds
 import dagger.BindsInstance
 import dagger.Component
@@ -11,10 +12,8 @@ import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
 import pl.dawidfiruzek.dagger2android.App
-import pl.dawidfiruzek.dagger2android.ui.BaseActivity
-import pl.dawidfiruzek.dagger2android.ui.BaseFragment
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
-import pl.dawidfiruzek.dagger2android.ui.main.MainFragment
+import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragment
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 import javax.inject.Singleton
 
@@ -24,10 +23,6 @@ class AppModule {
     @Provides
     fun context(application: Application): Context =
             application
-
-    @Provides
-    fun resources(context: Context): Resources =
-            context.resources
 }
 
 @Singleton
@@ -52,7 +47,7 @@ interface AppComponent {
 abstract class ActivityBuilderModule {
 
     @Binds
-    abstract fun activity(activity: BaseActivity): BaseActivity
+    abstract fun activity(activity: AppCompatActivity): AppCompatActivity
 
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     abstract fun bindMainActivity(): MainActivity
@@ -65,7 +60,7 @@ abstract class ActivityBuilderModule {
 abstract class FragmentBuilderModule {
 
     @Binds
-    abstract fun fragment(fragment: BaseFragment): BaseFragment
+    abstract fun fragment(fragment: Fragment): Fragment
 
     @ContributesAndroidInjector(modules = [MainFragmentModule::class])
     abstract fun mainFragment(): MainFragment

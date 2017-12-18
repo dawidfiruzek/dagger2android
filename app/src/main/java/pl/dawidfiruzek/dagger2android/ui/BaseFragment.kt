@@ -7,8 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import dagger.android.support.AndroidSupportInjection
+import javax.inject.Inject
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment<P : BaseContract.Presenter> : Fragment() {
+
+    @Inject
+    lateinit var presenter: P
 
     abstract val layoutId: Int
 
@@ -19,5 +23,15 @@ abstract class BaseFragment : Fragment() {
     override fun onAttach(context: Context?) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        presenter.viewCreated()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        presenter.viewDestroyed()
     }
 }
