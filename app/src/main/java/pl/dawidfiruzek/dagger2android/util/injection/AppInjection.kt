@@ -19,15 +19,15 @@ import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 import javax.inject.Singleton
 
 @Module
-class AppModule(private val application: Application) {
+class AppModule {
 
     @Provides
-    fun context(): Context =
-            application.baseContext
+    fun context(application: Application): Context =
+            application
 
     @Provides
-    fun resources(): Resources =
-            application.resources
+    fun resources(context: Context): Resources =
+            context.resources
 }
 
 @Singleton
@@ -42,7 +42,6 @@ interface AppComponent {
     interface Builder {
         @BindsInstance
         fun application(app: Application): Builder
-        fun appModule(appModule: AppModule): Builder
         fun build(): AppComponent
     }
 

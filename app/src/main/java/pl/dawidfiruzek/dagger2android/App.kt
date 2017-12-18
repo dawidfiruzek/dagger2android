@@ -6,7 +6,6 @@ import android.content.Context
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
-import pl.dawidfiruzek.dagger2android.util.injection.AppModule
 import pl.dawidfiruzek.dagger2android.util.injection.DaggerAppComponent
 import javax.inject.Inject
 
@@ -22,7 +21,6 @@ class App : Application(), HasActivityInjector {
 
         DaggerAppComponent.builder()
                 .application(this)
-                .appModule(AppModule(this))
                 .build()
                 .inject(this)
     }
