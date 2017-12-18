@@ -31,7 +31,11 @@ class AppModule(private val application: Application) {
 }
 
 @Singleton
-@Component(modules = [AndroidInjectionModule::class, AppModule::class, ActivityBuilderModule::class, FragmentBuilderModule::class])
+@Component(modules = [
+    AndroidInjectionModule::class,
+    ActivityBuilderModule::class,
+    FragmentBuilderModule::class,
+    AppModule::class])
 interface AppComponent {
 
     @Component.Builder
