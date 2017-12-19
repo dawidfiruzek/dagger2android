@@ -1,7 +1,6 @@
 package pl.dawidfiruzek.dagger2android.ui.main.fragment
 
 import pl.dawidfiruzek.dagger2android.ui.BasePresenter
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
 
 class MainFragmentPresenter(
         view: MainFragmentContract.View,
@@ -9,13 +8,4 @@ class MainFragmentPresenter(
 ) : BasePresenter<MainFragmentContract.View, MainFragmentContract.Router>(
         view,
         router
-), MainFragmentContract.Presenter {
-
-    override fun start() {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun stop() {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-}
+), MainFragmentContract.Presenter
