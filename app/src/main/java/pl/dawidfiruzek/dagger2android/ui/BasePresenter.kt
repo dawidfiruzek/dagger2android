@@ -8,8 +8,8 @@ abstract class BasePresenter<out V : BaseContract.View, out R : BaseContract.Rou
 ) : BaseContract.Presenter {
 
     @CallSuper
-    override fun start() = Unit
+    override fun initialize() = Unit
 
     @CallSuper
-    override fun stop() = Unit
+    override fun clear() = Unit
 }

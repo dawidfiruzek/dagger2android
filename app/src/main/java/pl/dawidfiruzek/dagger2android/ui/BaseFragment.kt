@@ -31,12 +31,12 @@ abstract class BaseFragment<P : BaseContract.Presenter> : Fragment() {
     @CallSuper
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter.start()
+        presenter.initialize()
     }
 
     @CallSuper
     override fun onDestroyView() {
         super.onDestroyView()
-        presenter.stop()
+        presenter.clear()
     }
 }

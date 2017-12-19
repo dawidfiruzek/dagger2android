@@ -7,7 +7,7 @@ interface BaseContract {
     interface Router
 
     interface Presenter {
-        fun start()
-        fun stop()
+        fun initialize()
+        fun clear()
     }
 }
