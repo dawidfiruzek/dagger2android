@@ -10,7 +10,8 @@ import android.view.ViewGroup
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-abstract class BaseFragment<P : BaseContract.Presenter> : Fragment() {
+abstract class BaseFragment<P : BaseContract.Presenter>
+    : Fragment(), BaseContract.View, BaseContract.Router {
 
     @Inject
     lateinit var presenter: P

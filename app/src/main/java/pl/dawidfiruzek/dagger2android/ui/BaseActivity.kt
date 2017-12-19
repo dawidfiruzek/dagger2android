@@ -10,7 +10,8 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
 
-abstract class BaseActivity<P : BaseContract.Presenter> : AppCompatActivity(), HasSupportFragmentInjector {
+abstract class BaseActivity<P : BaseContract.Presenter>
+    : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View, BaseContract.Router {
 
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
