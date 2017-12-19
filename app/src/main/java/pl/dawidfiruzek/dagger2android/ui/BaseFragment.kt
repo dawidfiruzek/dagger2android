@@ -18,25 +18,25 @@ abstract class BaseFragment<P : BaseContract.Presenter> : Fragment() {
     abstract val layoutId: Int
 
     @CallSuper
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(layoutId, container, false)
-    }
-
-    @CallSuper
     override fun onAttach(context: Context?) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)
     }
 
     @CallSuper
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(layoutId, container, false)
+    }
+
+    @CallSuper
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter.viewCreated()
+        presenter.start()
     }
 
     @CallSuper
     override fun onDestroyView() {
         super.onDestroyView()
-        presenter.viewDestroyed()
+        presenter.stop()
     }
 }

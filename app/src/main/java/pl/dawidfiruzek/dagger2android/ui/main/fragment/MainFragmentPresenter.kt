@@ -11,11 +11,11 @@ class MainFragmentPresenter(
         router
 ), MainFragmentContract.Presenter {
 
-    override fun viewCreated() {
+    override fun start() {
 //        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun viewDestroyed() {
+    override fun stop() {
 //        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

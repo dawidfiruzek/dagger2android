@@ -7,7 +7,7 @@ interface BaseContract {
     interface Router
 
     interface Presenter {
-        fun viewCreated()
-        fun viewDestroyed()
+        fun start()
+        fun stop()
     }
 }

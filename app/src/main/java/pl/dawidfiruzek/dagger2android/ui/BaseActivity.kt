@@ -25,13 +25,13 @@ abstract class BaseActivity<P : BaseContract.Presenter> : AppCompatActivity(), H
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
-        presenter.viewCreated()
+        presenter.start()
     }
 
     @CallSuper
     override fun onDestroy() {
         super.onDestroy()
-        presenter.viewDestroyed()
+        presenter.stop()
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
