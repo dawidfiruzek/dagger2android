@@ -7,7 +7,7 @@ import org.mockito.Mockito.verify
 import org.mockito.Mockito.verifyNoMoreInteractions
 import pl.dawidfiruzek.dagger2android.BaseTest
 import pl.dawidfiruzek.dagger2android.data.MainNavigationEvent
-import pl.dawidfiruzek.dagger2android.feature.common.navigation.EventHelper
+import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 import pl.dawidfiruzek.dagger2android.feature.main.MainActivityContract
 
 class MainActivityEventHelperTest : BaseTest() {

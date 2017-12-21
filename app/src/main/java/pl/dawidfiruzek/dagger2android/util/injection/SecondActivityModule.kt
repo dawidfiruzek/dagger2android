@@ -2,7 +2,7 @@ package pl.dawidfiruzek.dagger2android.util.injection
 
 import dagger.Module
 import dagger.Provides
-import pl.dawidfiruzek.dagger2android.feature.common.navigation.EventHelper
+import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract
 import pl.dawidfiruzek.dagger2android.feature.second.navigation.SecondActivityEventHelper
 import pl.dawidfiruzek.dagger2android.feature.second.navigation.SecondActivityRouter

@@ -11,7 +11,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
-import pl.dawidfiruzek.dagger2android.feature.common.navigation.EventHelper
+import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>(private val isHandlingNavigationEvents: Boolean)
