@@ -1,7 +1,7 @@
 package pl.dawidfiruzek.dagger2android.ui.second
 
 import pl.dawidfiruzek.dagger2android.R
-import pl.dawidfiruzek.dagger2android.ui.BaseActivity
+import pl.dawidfiruzek.dagger2android.ui.common.BaseActivity
 import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragment
 
 class SecondActivity : BaseActivity<SecondActivityContract.Presenter>(), SecondActivityContract.View {

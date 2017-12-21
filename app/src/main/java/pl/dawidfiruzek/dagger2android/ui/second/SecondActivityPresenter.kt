@@ -1,7 +1,6 @@
 package pl.dawidfiruzek.dagger2android.ui.second
 
-import pl.dawidfiruzek.dagger2android.ui.BasePresenter
-import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract
+import pl.dawidfiruzek.dagger2android.ui.common.BasePresenter
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract.View
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract.Router
 

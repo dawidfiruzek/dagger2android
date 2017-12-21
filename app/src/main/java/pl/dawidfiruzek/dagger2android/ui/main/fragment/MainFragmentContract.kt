@@ -1,6 +1,6 @@
 package pl.dawidfiruzek.dagger2android.ui.main.fragment
 
-import pl.dawidfiruzek.dagger2android.ui.BaseContract
+import pl.dawidfiruzek.dagger2android.ui.common.BaseContract
 
 interface MainFragmentContract {
 

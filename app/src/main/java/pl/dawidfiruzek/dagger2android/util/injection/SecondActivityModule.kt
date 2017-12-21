@@ -7,7 +7,7 @@ import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract
 import pl.dawidfiruzek.dagger2android.ui.second.navigation.SecondActivityEventHelper
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityPresenter
 import pl.dawidfiruzek.dagger2android.ui.second.navigation.SecondActivityRouter
-import pl.dawidfiruzek.dagger2android.ui.EventHelper
+import pl.dawidfiruzek.dagger2android.ui.common.navigation.EventHelper
 
 @Module
 class SecondActivityModule {

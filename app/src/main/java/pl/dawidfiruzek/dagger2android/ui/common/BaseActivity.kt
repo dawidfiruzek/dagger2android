@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.dagger2android.ui
+package pl.dawidfiruzek.dagger2android.ui.common
 
 import android.os.Bundle
 import android.support.annotation.CallSuper
@@ -13,6 +13,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
+import pl.dawidfiruzek.dagger2android.ui.common.navigation.EventHelper
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>

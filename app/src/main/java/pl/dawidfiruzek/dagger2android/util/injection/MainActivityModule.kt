@@ -7,7 +7,7 @@ import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
 import pl.dawidfiruzek.dagger2android.ui.main.navigation.MainActivityEventHelper
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityPresenter
 import pl.dawidfiruzek.dagger2android.ui.main.navigation.MainActivityRouter
-import pl.dawidfiruzek.dagger2android.ui.EventHelper
+import pl.dawidfiruzek.dagger2android.ui.common.navigation.EventHelper
 
 @Module
 class MainActivityModule {

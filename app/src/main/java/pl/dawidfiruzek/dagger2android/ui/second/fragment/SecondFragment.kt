@@ -2,7 +2,7 @@ package pl.dawidfiruzek.dagger2android.ui.second.fragment
 
 import butterknife.OnClick
 import pl.dawidfiruzek.dagger2android.R
-import pl.dawidfiruzek.dagger2android.ui.BaseFragment
+import pl.dawidfiruzek.dagger2android.ui.common.BaseFragment
 
 class SecondFragment : BaseFragment<SecondFragmentContract.Presenter>(), SecondFragmentContract.View {
 

@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.dagger2android.ui
+package pl.dawidfiruzek.dagger2android.ui.common
 
 interface BaseContract {
 

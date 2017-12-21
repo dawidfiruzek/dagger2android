@@ -1,6 +1,6 @@
 package pl.dawidfiruzek.dagger2android.ui.second
 
-import pl.dawidfiruzek.dagger2android.ui.BaseContract
+import pl.dawidfiruzek.dagger2android.ui.common.BaseContract
 import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragmentContract
 
 interface SecondActivityContract {
