@@ -2,15 +2,13 @@ package pl.dawidfiruzek.dagger2android.feature.second.navigation
 
 import android.content.Context
 import android.content.Intent
-import org.junit.Test
-
-import org.junit.Assert.*
 import org.junit.Ignore
+import org.junit.Test
 import org.mockito.Mock
-import org.mockito.Mockito
-import org.mockito.Mockito.*
+import org.mockito.Mockito.times
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.verifyNoMoreInteractions
 import pl.dawidfiruzek.dagger2android.BaseTest
-import pl.dawidfiruzek.dagger2android.extensions.startActivity
 import pl.dawidfiruzek.dagger2android.feature.main.ui.MainActivity
 import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract
 import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondActivity

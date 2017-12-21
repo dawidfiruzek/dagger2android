@@ -2,8 +2,8 @@ package pl.dawidfiruzek.dagger2android.feature.second.presentation
 
 import pl.dawidfiruzek.dagger2android.feature.common.presentation.BasePresenter
 import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract
-import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract.View
 import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract.Router
+import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract.View
 
 class SecondActivityPresenter(
         view: View,

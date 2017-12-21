@@ -7,7 +7,6 @@ import org.mockito.Mockito.verify
 import org.mockito.Mockito.verifyNoMoreInteractions
 import pl.dawidfiruzek.dagger2android.BaseTest
 import pl.dawidfiruzek.dagger2android.feature.second.SecondActivityContract
-import kotlin.concurrent.timer
 
 class SecondActivityPresenterTest : BaseTest() {
 

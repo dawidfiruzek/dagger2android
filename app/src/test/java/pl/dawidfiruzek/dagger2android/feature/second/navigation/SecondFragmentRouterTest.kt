@@ -2,11 +2,10 @@ package pl.dawidfiruzek.dagger2android.feature.second.navigation
 
 import org.greenrobot.eventbus.EventBus
 import org.junit.Test
-
-import org.junit.Assert.*
 import org.mockito.Mock
-import org.mockito.Mockito
-import org.mockito.Mockito.*
+import org.mockito.Mockito.times
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.verifyNoMoreInteractions
 import pl.dawidfiruzek.dagger2android.BaseTest
 import pl.dawidfiruzek.dagger2android.data.BaseNavigationEvent
 import pl.dawidfiruzek.dagger2android.data.SecondNavigationEvent
