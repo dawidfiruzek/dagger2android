@@ -5,8 +5,10 @@ import dagger.Module
 import dagger.Provides
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivityEventHelper
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityPresenter
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityRouter
+import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 
 @Module
 class MainActivityModule {
@@ -21,6 +23,10 @@ class MainActivityModule {
     @Provides
     fun presenter(view: MainActivityContract.View, router: MainActivityContract.Router): MainActivityContract.Presenter =
             MainActivityPresenter(view, router)
+
+    @Provides
+    fun eventHelper(router: MainActivityContract.Router): EventHelper =
+            MainActivityEventHelper(router)
 
     @Provides
     fun fm(activity: MainActivity): FragmentManager = activity.supportFragmentManager

@@ -1,3 +1,7 @@
 package pl.dawidfiruzek.dagger2android.data
 
-class MainNavigationEvent
+interface NavigationEvent
+
+enum class MainNavigationEvent : NavigationEvent {
+    NAVIGATE_TO_SECOND
+}

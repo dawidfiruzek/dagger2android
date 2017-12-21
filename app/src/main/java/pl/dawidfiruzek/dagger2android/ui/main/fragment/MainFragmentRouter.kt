@@ -7,6 +7,6 @@ import pl.dawidfiruzek.dagger2android.ui.BaseFragmentRouter
 class MainFragmentRouter(eventBus: EventBus) : BaseFragmentRouter(eventBus), MainFragmentContract.Router {
 
     override fun navigateToSecondScreen() {
-        eventBus.post(MainNavigationEvent())
+        eventBus.post(MainNavigationEvent.NAVIGATE_TO_SECOND)
     }
 }

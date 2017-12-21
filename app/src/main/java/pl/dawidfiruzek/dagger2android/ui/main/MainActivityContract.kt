@@ -6,7 +6,9 @@ interface MainActivityContract {
 
     interface View : BaseContract.View
 
-    interface Router : BaseContract.Router
+    interface Router : BaseContract.Router {
+        fun navigateToSecond()
+    }
 
     interface Presenter : BaseContract.Presenter
 }
