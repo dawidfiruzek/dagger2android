@@ -57,10 +57,6 @@ abstract class BaseActivity<P : BaseContract.Presenter>
         presenter.clear()
     }
 
-    override fun onBackPressed() {
-        presenter.onBackPressed()
-    }
-
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
             fragmentInjector
 

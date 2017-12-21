@@ -9,8 +9,8 @@ abstract class BaseEventHelper<out R : BaseContract.Router>(protected val router
     @CallSuper
     override fun handleEvent(event: NavigationEvent) {
         when (event) {
-            BaseNavigationEvent.NAVIGATE_BACK -> {
-                router.navigateBack()
+            BaseNavigationEvent.FINISH -> {
+                router.finish()
                 return
             }
         }

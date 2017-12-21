@@ -6,7 +6,7 @@ import kotlin.reflect.KClass
 
 abstract class BaseActivityRouter(protected val activity: AppCompatActivity) : BaseContract.Router {
 
-    override fun navigateBack() {
+    override fun finish() {
         activity.finish()
     }
 

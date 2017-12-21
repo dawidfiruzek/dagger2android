@@ -12,8 +12,4 @@ abstract class BasePresenter<out V : BaseContract.View, out R : BaseContract.Rou
 
     @CallSuper
     override fun clear() = Unit
-
-    override fun onBackPressed() {
-        router.navigateBack()
-    }
 }
