@@ -8,4 +8,10 @@ class MainActivityPresenter(
 ) : BasePresenter<MainActivityContract.View, MainActivityContract.Router>(
         view,
         router
-), MainActivityContract.Presenter
+), MainActivityContract.Presenter {
+
+    override fun initialize() = with(view) {
+        super.initialize()
+        showMainScreen()
+    }
+}

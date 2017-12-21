@@ -1,6 +1,5 @@
 package pl.dawidfiruzek.dagger2android.util.injection
 
-import android.support.v4.app.FragmentManager
 import dagger.Module
 import dagger.Provides
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
@@ -27,7 +26,4 @@ class MainActivityModule {
     @Provides
     fun eventHelper(router: MainActivityContract.Router): EventHelper =
             MainActivityEventHelper(router)
-
-    @Provides
-    fun fm(activity: MainActivity): FragmentManager = activity.supportFragmentManager
 }
