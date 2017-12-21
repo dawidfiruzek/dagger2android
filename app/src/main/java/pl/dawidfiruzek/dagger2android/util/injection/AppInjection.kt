@@ -11,9 +11,12 @@ import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
+import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.App
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragment
+import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract
+import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentRouter
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 import javax.inject.Singleton
 
@@ -23,6 +26,10 @@ class AppModule {
     @Provides
     fun context(application: Application): Context =
             application
+
+    @Provides
+    fun eventBus(): EventBus =
+            EventBus.getDefault()
 }
 
 @Singleton

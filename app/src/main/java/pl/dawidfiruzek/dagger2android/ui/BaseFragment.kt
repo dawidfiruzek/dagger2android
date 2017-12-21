@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import butterknife.ButterKnife
 import butterknife.Unbinder
 import dagger.android.support.AndroidSupportInjection
-import org.greenrobot.eventbus.EventBus
 import javax.inject.Inject
 
 abstract class BaseFragment<P : BaseContract.Presenter>
@@ -39,7 +38,6 @@ abstract class BaseFragment<P : BaseContract.Presenter>
     @CallSuper
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        EventBus.getDefault().register(this)
         presenter.initialize()
     }
 
@@ -47,7 +45,6 @@ abstract class BaseFragment<P : BaseContract.Presenter>
     override fun onDestroyView() {
         super.onDestroyView()
         presenter.clear()
-        EventBus.getDefault().register(this)
         unbinder.unbind()
     }
 }

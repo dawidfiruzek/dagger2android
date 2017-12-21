@@ -4,7 +4,7 @@ import butterknife.OnClick
 import pl.dawidfiruzek.dagger2android.R
 import pl.dawidfiruzek.dagger2android.ui.BaseFragment
 
-class MainFragment : BaseFragment<MainFragmentContract.Presenter>(), MainFragmentContract.View, MainFragmentContract.Router {
+class MainFragment : BaseFragment<MainFragmentContract.Presenter>(), MainFragmentContract.View {
 
     override val layoutId: Int = R.layout.fragment_main
 

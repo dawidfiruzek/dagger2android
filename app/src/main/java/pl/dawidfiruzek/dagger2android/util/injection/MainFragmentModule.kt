@@ -2,10 +2,11 @@ package pl.dawidfiruzek.dagger2android.util.injection
 
 import dagger.Module
 import dagger.Provides
-import pl.dawidfiruzek.dagger2android.data.ExampleInjectedClass
+import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragment
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentPresenter
+import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentRouter
 
 @Module
 class MainFragmentModule {
@@ -14,12 +15,10 @@ class MainFragmentModule {
     fun view(fragment: MainFragment): MainFragmentContract.View = fragment
 
     @Provides
-    fun router(fragment: MainFragment): MainFragmentContract.Router = fragment
+    fun router(eventBus: EventBus): MainFragmentContract.Router =
+            MainFragmentRouter(eventBus)
 
     @Provides
     fun presenter(view: MainFragmentContract.View, router: MainFragmentContract.Router): MainFragmentContract.Presenter =
             MainFragmentPresenter(view, router)
-
-    @Provides
-    fun exampleInjectedClass(): ExampleInjectedClass = ExampleInjectedClass(2323)
 }

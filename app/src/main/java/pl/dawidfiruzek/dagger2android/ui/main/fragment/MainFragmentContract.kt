@@ -6,7 +6,9 @@ interface MainFragmentContract {
 
     interface View : BaseContract.View
 
-    interface Router : BaseContract.Router
+    interface Router : BaseContract.Router {
+        fun navigateToSecondScreen()
+    }
 
     interface Presenter : BaseContract.Presenter {
         fun navigateClicked()

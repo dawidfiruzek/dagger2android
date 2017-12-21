@@ -11,6 +11,6 @@ class MainFragmentPresenter(
 ), MainFragmentContract.Presenter {
 
     override fun navigateClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        router.navigateToSecondScreen()
     }
 }

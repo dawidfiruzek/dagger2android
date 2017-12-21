@@ -21,6 +21,9 @@ abstract class BaseActivity<P : BaseContract.Presenter>
     @Inject
     lateinit var presenter: P
 
+    @Inject
+    lateinit var eventBus: EventBus
+
     abstract val layoutId: Int
 
     @CallSuper
@@ -29,7 +32,6 @@ abstract class BaseActivity<P : BaseContract.Presenter>
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
         ButterKnife.bind(this)
-        EventBus.getDefault().register(this)
         presenter.initialize()
     }
 
@@ -37,7 +39,6 @@ abstract class BaseActivity<P : BaseContract.Presenter>
     override fun onDestroy() {
         super.onDestroy()
         presenter.clear()
-        EventBus.getDefault().unregister(this)
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
