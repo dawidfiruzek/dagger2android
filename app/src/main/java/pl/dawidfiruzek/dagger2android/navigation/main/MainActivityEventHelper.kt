@@ -1,8 +1,9 @@
-package pl.dawidfiruzek.dagger2android.ui.main
+package pl.dawidfiruzek.dagger2android.navigation.main
 
 import pl.dawidfiruzek.dagger2android.data.MainNavigationEvent
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
-import pl.dawidfiruzek.dagger2android.ui.BaseEventHelper
+import pl.dawidfiruzek.dagger2android.navigation.BaseEventHelper
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
 
 class MainActivityEventHelper(
         router: MainActivityContract.Router

@@ -13,6 +13,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
+import pl.dawidfiruzek.dagger2android.navigation.EventHelper
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>

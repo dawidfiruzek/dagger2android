@@ -1,8 +1,9 @@
-package pl.dawidfiruzek.dagger2android.ui
+package pl.dawidfiruzek.dagger2android.navigation
 
 import android.support.annotation.CallSuper
 import pl.dawidfiruzek.dagger2android.data.BaseNavigationEvent
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
+import pl.dawidfiruzek.dagger2android.ui.BaseContract
 
 abstract class BaseEventHelper<out R : BaseContract.Router>(protected val router: R) : EventHelper {
 

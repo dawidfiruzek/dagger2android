@@ -4,10 +4,10 @@ import dagger.Module
 import dagger.Provides
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivityEventHelper
+import pl.dawidfiruzek.dagger2android.navigation.main.MainActivityEventHelper
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityPresenter
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivityRouter
-import pl.dawidfiruzek.dagger2android.ui.EventHelper
+import pl.dawidfiruzek.dagger2android.navigation.main.MainActivityRouter
+import pl.dawidfiruzek.dagger2android.navigation.EventHelper
 
 @Module
 class MainActivityModule {

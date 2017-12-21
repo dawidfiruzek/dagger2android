@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.dagger2android.ui
+package pl.dawidfiruzek.dagger2android.navigation
 
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
 

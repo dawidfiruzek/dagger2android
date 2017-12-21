@@ -1,7 +1,8 @@
-package pl.dawidfiruzek.dagger2android.ui
+package pl.dawidfiruzek.dagger2android.navigation
 
 import android.support.v7.app.AppCompatActivity
 import pl.dawidfiruzek.dagger2android.extensions.startActivity
+import pl.dawidfiruzek.dagger2android.ui.BaseContract
 import kotlin.reflect.KClass
 
 abstract class BaseActivityRouter(protected val activity: AppCompatActivity) : BaseContract.Router {

@@ -6,7 +6,7 @@ import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragment
 import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragmentContract
 import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragmentPresenter
-import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragmentRouter
+import pl.dawidfiruzek.dagger2android.navigation.second.SecondFragmentRouter
 
 @Module
 class SecondFragmentModule {

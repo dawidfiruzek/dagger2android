@@ -1,6 +1,8 @@
-package pl.dawidfiruzek.dagger2android.ui.main
+package pl.dawidfiruzek.dagger2android.navigation.main
 
-import pl.dawidfiruzek.dagger2android.ui.BaseActivityRouter
+import pl.dawidfiruzek.dagger2android.navigation.BaseActivityRouter
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 
 class MainActivityRouter(activity: MainActivity) : BaseActivityRouter(activity), MainActivityContract.Router {
