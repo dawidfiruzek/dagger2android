@@ -1,7 +1,6 @@
-package pl.dawidfiruzek.dagger2android.presentation
+package pl.dawidfiruzek.dagger2android.ui
 
 import android.support.annotation.CallSuper
-import pl.dawidfiruzek.dagger2android.ui.BaseContract
 
 abstract class BasePresenter<out V : BaseContract.View, out R : BaseContract.Router>(
         protected val view: V,

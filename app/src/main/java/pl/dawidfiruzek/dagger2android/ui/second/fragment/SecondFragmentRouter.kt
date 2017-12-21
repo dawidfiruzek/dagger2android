@@ -1,8 +1,8 @@
-package pl.dawidfiruzek.dagger2android.navigation.second
+package pl.dawidfiruzek.dagger2android.ui.second.fragment
 
 import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.data.SecondNavigationEvent
-import pl.dawidfiruzek.dagger2android.navigation.BaseFragmentRouter
+import pl.dawidfiruzek.dagger2android.ui.BaseFragmentRouter
 import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragmentContract
 
 class SecondFragmentRouter(

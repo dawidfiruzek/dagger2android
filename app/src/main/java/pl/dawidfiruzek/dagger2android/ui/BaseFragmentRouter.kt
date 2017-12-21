@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.dagger2android.navigation
+package pl.dawidfiruzek.dagger2android.ui
 
 import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.data.BaseNavigationEvent

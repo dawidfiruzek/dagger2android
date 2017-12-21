@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.dagger2android.navigation
+package pl.dawidfiruzek.dagger2android.ui
 
 import android.support.v7.app.AppCompatActivity
 import pl.dawidfiruzek.dagger2android.extensions.startActivity
