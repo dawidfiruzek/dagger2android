@@ -11,30 +11,12 @@ import javax.inject.Inject
 
 class MainActivity : BaseActivity<MainActivityContract.Presenter>(), MainActivityContract.View {
 
-    @Inject
-    lateinit var eventHelper: EventHelper
-
     override val layoutId: Int = R.layout.activity_main
-
-    override fun onStart() {
-        super.onStart()
-        eventBus.register(this)
-    }
-
-    override fun onStop() {
-        super.onStop()
-        eventBus.unregister(this)
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun navigationEvent(event: NavigationEvent) {
-        eventHelper.handleEvent(event)
-    }
 
     //region View
     override fun showMainScreen() {
         supportFragmentManager.beginTransaction()
-                .replace(R.id.main_root, MainFragment())
+                .replace(R.id.root, MainFragment())
                 .commit()
     }
     //endregion

@@ -4,8 +4,10 @@ import dagger.Module
 import dagger.Provides
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract
+import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityEventHelper
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityPresenter
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityRouter
+import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 
 @Module
 class SecondActivityModule {
@@ -16,6 +18,10 @@ class SecondActivityModule {
     @Provides
     fun router(activity: SecondActivity): SecondActivityContract.Router =
             SecondActivityRouter(activity)
+
+    @Provides
+    fun eventHelper(router: SecondActivityContract.Router): EventHelper =
+            SecondActivityEventHelper(router)
 
     @Provides
     fun presenter(view: SecondActivityContract.View, router: SecondActivityContract.Router): SecondActivityContract.Presenter =

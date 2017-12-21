@@ -15,9 +15,8 @@ import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.App
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragment
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentRouter
 import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
+import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragment
 import javax.inject.Singleton
 
 @Module
@@ -71,4 +70,7 @@ abstract class FragmentBuilderModule {
 
     @ContributesAndroidInjector(modules = [MainFragmentModule::class])
     abstract fun mainFragment(): MainFragment
+
+    @ContributesAndroidInjector(modules = [SecondFragmentModule::class])
+    abstract fun secondFragment(): SecondFragment
 }

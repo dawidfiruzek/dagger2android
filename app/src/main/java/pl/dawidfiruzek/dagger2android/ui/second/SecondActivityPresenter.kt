@@ -8,4 +8,10 @@ class SecondActivityPresenter(
 ) : BasePresenter<SecondActivityContract.View, SecondActivityContract.Router>(
         view,
         router
-), SecondActivityContract.Presenter
+), SecondActivityContract.Presenter {
+
+    override fun initialize() {
+        super.initialize()
+        view.showSecondScreen()
+    }
+}
