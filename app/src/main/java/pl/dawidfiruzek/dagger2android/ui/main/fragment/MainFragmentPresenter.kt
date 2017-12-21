@@ -8,4 +8,9 @@ class MainFragmentPresenter(
 ) : BasePresenter<MainFragmentContract.View, MainFragmentContract.Router>(
         view,
         router
-), MainFragmentContract.Presenter
+), MainFragmentContract.Presenter {
+
+    override fun navigateClicked() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+}
