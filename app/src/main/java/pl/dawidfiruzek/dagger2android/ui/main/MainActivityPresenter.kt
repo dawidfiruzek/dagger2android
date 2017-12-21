@@ -1,11 +1,13 @@
 package pl.dawidfiruzek.dagger2android.ui.main
 
 import pl.dawidfiruzek.dagger2android.ui.BasePresenter
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract.View
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract.Router
 
 class MainActivityPresenter(
-        view: MainActivityContract.View,
-        router: MainActivityContract.Router
-) : BasePresenter<MainActivityContract.View, MainActivityContract.Router>(
+        view: View,
+        router: Router
+) : BasePresenter<View, Router>(
         view,
         router
 ), MainActivityContract.Presenter {
