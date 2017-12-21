@@ -4,10 +4,13 @@ interface BaseContract {
 
     interface View
 
-    interface Router
+    interface Router {
+        fun navigateBack()
+    }
 
     interface Presenter {
         fun initialize()
         fun clear()
+        fun onBackPressed()
     }
 }

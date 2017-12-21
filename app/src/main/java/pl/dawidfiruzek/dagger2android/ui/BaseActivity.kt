@@ -13,7 +13,6 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
-import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>
@@ -56,6 +55,10 @@ abstract class BaseActivity<P : BaseContract.Presenter>
     override fun onDestroy() {
         super.onDestroy()
         presenter.clear()
+    }
+
+    override fun onBackPressed() {
+        presenter.onBackPressed()
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
