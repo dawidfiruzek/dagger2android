@@ -3,11 +3,11 @@ package pl.dawidfiruzek.dagger2android.navigation.second
 import pl.dawidfiruzek.dagger2android.data.NavigationEvent
 import pl.dawidfiruzek.dagger2android.data.SecondNavigationEvent
 import pl.dawidfiruzek.dagger2android.navigation.BaseEventHelper
-import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract
+import pl.dawidfiruzek.dagger2android.ui.second.SecondActivityContract.Router
 
 class SecondActivityEventHelper(
-        router: SecondActivityContract.Router
-) : BaseEventHelper<SecondActivityContract.Router>(router) {
+        router: Router
+) : BaseEventHelper<Router>(router) {
 
     override fun handleEvent(event: NavigationEvent) {
         super.handleEvent(event)
