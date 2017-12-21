@@ -5,7 +5,7 @@ import dagger.Provides
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
 import pl.dawidfiruzek.dagger2android.navigation.main.MainActivityEventHelper
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivityPresenter
+import pl.dawidfiruzek.dagger2android.presentation.main.MainActivityPresenter
 import pl.dawidfiruzek.dagger2android.navigation.main.MainActivityRouter
 import pl.dawidfiruzek.dagger2android.navigation.EventHelper
 

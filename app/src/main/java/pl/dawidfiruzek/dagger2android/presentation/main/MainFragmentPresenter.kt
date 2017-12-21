@@ -1,6 +1,7 @@
-package pl.dawidfiruzek.dagger2android.ui.main.fragment
+package pl.dawidfiruzek.dagger2android.presentation.main
 
-import pl.dawidfiruzek.dagger2android.ui.BasePresenter
+import pl.dawidfiruzek.dagger2android.presentation.BasePresenter
+import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract.View
 import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract.Router
 
