@@ -13,7 +13,7 @@ import org.greenrobot.eventbus.EventBus
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>
-    : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View, BaseContract.Router {
+    : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View {
 
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
