@@ -6,6 +6,7 @@ import dagger.Provides
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
 import pl.dawidfiruzek.dagger2android.ui.main.MainActivityPresenter
+import pl.dawidfiruzek.dagger2android.ui.main.MainActivityRouter
 
 @Module
 class MainActivityModule {
@@ -14,7 +15,8 @@ class MainActivityModule {
     fun view(activity: MainActivity): MainActivityContract.View = activity
 
     @Provides
-    fun router(activity: MainActivity): MainActivityContract.Router = activity
+    fun router(activity: MainActivity): MainActivityContract.Router =
+            MainActivityRouter(activity)
 
     @Provides
     fun presenter(view: MainActivityContract.View, router: MainActivityContract.Router): MainActivityContract.Presenter =
