@@ -6,7 +6,6 @@ import org.mockito.Mockito.times
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.verifyNoMoreInteractions
 import pl.dawidfiruzek.dagger2android.BaseTest
-import pl.dawidfiruzek.dagger2android.data.BaseNavigationEvent
 import pl.dawidfiruzek.dagger2android.data.MainNavigationEvent
 import pl.dawidfiruzek.dagger2android.feature.common.navigation.EventHelper
 import pl.dawidfiruzek.dagger2android.feature.main.MainActivityContract
@@ -36,12 +35,5 @@ class MainActivityEventHelperTest : BaseTest() {
         eventHelper.handleEvent(MainNavigationEvent.NAVIGATE_TO_SECOND)
 
         verify(router, times(1)).navigateToSecondScreen()
-    }
-
-    @Test
-    fun `should finish after it's event occur`() {
-        eventHelper.handleEvent(BaseNavigationEvent.FINISH)
-
-        verify(router, times(1)).finish()
     }
 }

@@ -7,7 +7,6 @@ import org.mockito.Mockito.times
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.verifyNoMoreInteractions
 import pl.dawidfiruzek.dagger2android.BaseTest
-import pl.dawidfiruzek.dagger2android.data.BaseNavigationEvent
 import pl.dawidfiruzek.dagger2android.data.SecondNavigationEvent
 import pl.dawidfiruzek.dagger2android.feature.second.SecondFragmentContract
 
@@ -35,12 +34,5 @@ class SecondFragmentRouterTest : BaseTest() {
         router.navigateToMainScreen()
 
         verify(eventBus, times(1)).post(SecondNavigationEvent.NAVIGATE_TO_MAIN)
-    }
-
-    @Test
-    fun `should post FINISH after finish is called`() {
-        router.finish()
-
-        verify(eventBus, times(1)).post(BaseNavigationEvent.FINISH)
     }
 }

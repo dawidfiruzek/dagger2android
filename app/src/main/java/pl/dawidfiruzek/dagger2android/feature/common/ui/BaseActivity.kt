@@ -10,14 +10,11 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
-import pl.dawidfiruzek.dagger2android.data.NavigationEvent
 import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 import pl.dawidfiruzek.dagger2android.feature.common.navigation.EventHelper
 import javax.inject.Inject
 
-abstract class BaseActivity<P : BaseContract.Presenter>
+abstract class BaseActivity<P : BaseContract.Presenter>(private val isHandlingNavigationEvents: Boolean)
     : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View {
 
     @Inject
@@ -43,14 +40,20 @@ abstract class BaseActivity<P : BaseContract.Presenter>
         presenter.initialize()
     }
 
+    @CallSuper
     override fun onStart() {
         super.onStart()
-        eventBus.register(this)
+        if (isHandlingNavigationEvents) {
+            eventBus.register(this)
+        }
     }
 
+    @CallSuper
     override fun onStop() {
         super.onStop()
-        eventBus.unregister(this)
+        if (isHandlingNavigationEvents) {
+            eventBus.unregister(this)
+        }
     }
 
     @CallSuper
@@ -61,9 +64,4 @@ abstract class BaseActivity<P : BaseContract.Presenter>
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
             fragmentInjector
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun navigationEvent(event: NavigationEvent) {
-        eventHelper.handleEvent(event)
-    }
 }

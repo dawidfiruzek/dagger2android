@@ -47,11 +47,4 @@ class SecondActivityRouterTest : BaseTest() {
 
         verify(activity, times(1)).startActivity(intent)
     }
-
-    @Test
-    fun `activity's finish should be called after router's finish is called`() {
-        router.finish()
-
-        verify(activity, times(1)).finish()
-    }
 }

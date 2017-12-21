@@ -39,11 +39,4 @@ class MainActivityRouterTest : BaseTest() {
 
         Mockito.verify(activity, Mockito.times(1)).startActivity(intent)
     }
-
-    @Test
-    fun `activity's finish should be called after router's finish is called`() {
-        router.finish()
-
-        Mockito.verify(activity, Mockito.times(1)).finish()
-    }
 }

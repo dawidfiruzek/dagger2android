@@ -4,9 +4,7 @@ interface BaseContract {
 
     interface View
 
-    interface Router {
-        fun finish()
-    }
+    interface Router
 
     interface Presenter {
         fun initialize()
