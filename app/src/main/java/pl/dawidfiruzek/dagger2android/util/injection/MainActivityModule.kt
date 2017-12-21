@@ -2,12 +2,12 @@ package pl.dawidfiruzek.dagger2android.util.injection
 
 import dagger.Module
 import dagger.Provides
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivityContract
-import pl.dawidfiruzek.dagger2android.ui.main.navigation.MainActivityEventHelper
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivityPresenter
-import pl.dawidfiruzek.dagger2android.ui.main.navigation.MainActivityRouter
-import pl.dawidfiruzek.dagger2android.ui.common.navigation.EventHelper
+import pl.dawidfiruzek.dagger2android.feature.main.ui.MainActivity
+import pl.dawidfiruzek.dagger2android.feature.main.MainActivityContract
+import pl.dawidfiruzek.dagger2android.feature.main.navigation.MainActivityEventHelper
+import pl.dawidfiruzek.dagger2android.feature.main.presentation.MainActivityPresenter
+import pl.dawidfiruzek.dagger2android.feature.main.navigation.MainActivityRouter
+import pl.dawidfiruzek.dagger2android.feature.common.navigation.EventHelper
 
 @Module
 class MainActivityModule {

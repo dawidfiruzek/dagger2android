@@ -3,10 +3,10 @@ package pl.dawidfiruzek.dagger2android.util.injection
 import dagger.Module
 import dagger.Provides
 import org.greenrobot.eventbus.EventBus
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragment
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentContract
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentPresenter
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragmentRouter
+import pl.dawidfiruzek.dagger2android.feature.main.ui.MainFragment
+import pl.dawidfiruzek.dagger2android.feature.main.MainFragmentContract
+import pl.dawidfiruzek.dagger2android.feature.main.presentation.MainFragmentPresenter
+import pl.dawidfiruzek.dagger2android.feature.main.navigation.MainFragmentRouter
 
 @Module
 class MainFragmentModule {

@@ -13,10 +13,10 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
 import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.App
-import pl.dawidfiruzek.dagger2android.ui.main.MainActivity
-import pl.dawidfiruzek.dagger2android.ui.main.fragment.MainFragment
-import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
-import pl.dawidfiruzek.dagger2android.ui.second.fragment.SecondFragment
+import pl.dawidfiruzek.dagger2android.feature.main.ui.MainActivity
+import pl.dawidfiruzek.dagger2android.feature.main.ui.MainFragment
+import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondActivity
+import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondFragment
 import javax.inject.Singleton
 
 @Module

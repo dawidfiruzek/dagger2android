@@ -4,6 +4,6 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.dawidfiruzek.dagger2android.ui.main.MainActivity">
+    tools:context="pl.dawidfiruzek.dagger2android.feature.main.ui.MainActivity">
 
 </FrameLayout>
