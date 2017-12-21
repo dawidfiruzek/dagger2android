@@ -5,7 +5,7 @@ import pl.dawidfiruzek.dagger2android.ui.second.SecondActivity
 
 class MainActivityRouter(activity: MainActivity) : BaseActivityRouter(activity), MainActivityContract.Router {
 
-    override fun navigateToSecond() {
+    override fun navigateToSecondScreen() {
         startActivity(SecondActivity::class)
     }
 }

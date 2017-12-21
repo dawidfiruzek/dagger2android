@@ -8,7 +8,7 @@ class MainActivityEventHelper(private val router: MainActivityContract.Router) :
 
     override fun handleEvent(event: NavigationEvent) {
         when(event) {
-            MainNavigationEvent.NAVIGATE_TO_SECOND -> router.navigateToSecond()
+            MainNavigationEvent.NAVIGATE_TO_SECOND -> router.navigateToSecondScreen()
         }
     }
 }
