@@ -10,10 +10,6 @@ import pl.dawidfiruzek.dagger2android.feature.second.presentation.SecondActivity
 import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondActivity
 import javax.inject.Scope
 
-@Scope
-@Retention(AnnotationRetention.RUNTIME)
-annotation class SecondActivityScope
-
 @Module
 class SecondActivityModule {
 
@@ -28,7 +24,7 @@ class SecondActivityModule {
     fun eventHelper(presenter: SecondActivityContract.Presenter): EventHelper =
             SecondActivityEventHelper(presenter)
 
-    @SecondActivityScope
+    @RuntimeScope
     @Provides
     fun presenter(view: SecondActivityContract.View, router: SecondActivityContract.Router): SecondActivityContract.Presenter =
             SecondActivityPresenter(view, router)

@@ -19,7 +19,12 @@ import pl.dawidfiruzek.dagger2android.feature.main.ui.MainFragment
 import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondActivity
 import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondFragment
 import pl.dawidfiruzek.dagger2android.feature.splash.ui.SplashActivity
+import javax.inject.Scope
 import javax.inject.Singleton
+
+@Scope
+@Retention(AnnotationRetention.RUNTIME)
+annotation class RuntimeScope
 
 @Module
 class AppModule {
@@ -61,11 +66,11 @@ abstract class ActivityBuilderModule {
     @Binds
     abstract fun activity(activity: AppCompatActivity): AppCompatActivity
 
-    @MainActivityScope
+    @RuntimeScope
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     abstract fun bindMainActivity(): MainActivity
 
-    @SecondActivityScope
+    @RuntimeScope
     @ContributesAndroidInjector(modules = [SecondActivityModule::class])
     abstract fun bindSecondActivity(): SecondActivity
 
