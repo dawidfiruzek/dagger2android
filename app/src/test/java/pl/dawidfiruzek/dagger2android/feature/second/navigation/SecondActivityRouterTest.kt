@@ -1,6 +1,5 @@
 package pl.dawidfiruzek.dagger2android.feature.second.navigation
 
-import android.content.Context
 import android.content.Intent
 import org.junit.Ignore
 import org.junit.Test
@@ -17,9 +16,6 @@ class SecondActivityRouterTest : BaseTest() {
 
     @Mock
     private lateinit var activity: SecondActivity
-
-    @Mock
-    private lateinit var context: Context
 
     private lateinit var router: SecondActivityContract.Router
 
