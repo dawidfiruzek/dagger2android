@@ -14,7 +14,7 @@ class SecondActivity : BaseActivity<SecondActivityContract.Presenter>(true), Sec
     @Inject
     lateinit var eventHelper: EventHelper
 
-    override val layoutId: Int = R.layout.activity_main
+    override val layoutId: Int = R.layout.activity_second
 
     override fun showSecondScreen() {
         supportFragmentManager.beginTransaction()

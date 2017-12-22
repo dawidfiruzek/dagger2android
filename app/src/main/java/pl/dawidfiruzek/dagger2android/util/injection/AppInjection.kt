@@ -11,12 +11,14 @@ import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
+import io.reactivex.disposables.CompositeDisposable
 import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.App
 import pl.dawidfiruzek.dagger2android.feature.main.ui.MainActivity
 import pl.dawidfiruzek.dagger2android.feature.main.ui.MainFragment
 import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondActivity
 import pl.dawidfiruzek.dagger2android.feature.second.ui.SecondFragment
+import pl.dawidfiruzek.dagger2android.feature.splash.ui.SplashActivity
 import javax.inject.Singleton
 
 @Module
@@ -29,6 +31,10 @@ class AppModule {
     @Provides
     fun eventBus(): EventBus =
             EventBus.getDefault()
+
+    @Provides
+    fun compositeDisposable(): CompositeDisposable =
+            CompositeDisposable()
 }
 
 @Singleton
@@ -62,6 +68,9 @@ abstract class ActivityBuilderModule {
     @SecondActivityScope
     @ContributesAndroidInjector(modules = [SecondActivityModule::class])
     abstract fun bindSecondActivity(): SecondActivity
+
+    @ContributesAndroidInjector(modules = [SplashActivityModule::class])
+    abstract fun bindSplashActivity(): SplashActivity
 }
 
 @Module

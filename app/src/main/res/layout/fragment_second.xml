@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.dawidfiruzek.dagger2android.feature.main.ui.MainActivity">
+    tools:context="pl.dawidfiruzek.dagger2android.feature.second.ui.SecondActivity">
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,6 +1,9 @@
 package pl.dawidfiruzek.dagger2android
 
 import android.support.annotation.CallSuper
+import io.reactivex.android.plugins.RxAndroidPlugins
+import io.reactivex.plugins.RxJavaPlugins
+import io.reactivex.schedulers.Schedulers
 import org.junit.After
 import org.junit.Before
 import org.mockito.Mockito
@@ -17,7 +20,16 @@ abstract class BaseTest {
     @After
     @CallSuper
     open fun tearDown() {
+        RxAndroidPlugins.reset()
+        RxJavaPlugins.reset()
+    }
 
+    protected fun trampolineRxPlugin() {
+        RxAndroidPlugins.setMainThreadSchedulerHandler { Schedulers.trampoline() }
+        RxJavaPlugins.setComputationSchedulerHandler { Schedulers.trampoline() }
+        RxJavaPlugins.setIoSchedulerHandler { Schedulers.trampoline() }
+        RxJavaPlugins.setSingleSchedulerHandler { Schedulers.trampoline() }
+        RxJavaPlugins.setNewThreadSchedulerHandler { Schedulers.trampoline() }
     }
 
     protected fun <T> any(): T {
