@@ -4,9 +4,9 @@ import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 
 interface MainFragmentContract {
 
-    interface View : BaseContract.View
+    interface View
 
-    interface Router : BaseContract.Router {
+    interface Router {
         fun navigateToSecondScreen()
     }
 

@@ -4,11 +4,11 @@ import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 
 interface SecondActivityContract {
 
-    interface View : BaseContract.View {
+    interface View {
         fun showSecondScreen()
     }
 
-    interface Router : BaseContract.Router, SecondFragmentContract.Router
+    interface Router : SecondFragmentContract.Router
 
     interface Presenter : BaseContract.Presenter {
         fun eventNavigateToMain()

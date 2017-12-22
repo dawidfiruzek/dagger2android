@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>(
         private val isHandlingEvents: Boolean = false
-) : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View {
+) : AppCompatActivity(), HasSupportFragmentInjector {
 
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
