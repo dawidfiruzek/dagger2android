@@ -6,8 +6,13 @@ import pl.dawidfiruzek.dagger2android.R
 import pl.dawidfiruzek.dagger2android.data.MainNavigationEvent
 import pl.dawidfiruzek.dagger2android.feature.common.ui.BaseActivity
 import pl.dawidfiruzek.dagger2android.feature.main.MainActivityContract
+import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
+import javax.inject.Inject
 
 class MainActivity : BaseActivity<MainActivityContract.Presenter>(true), MainActivityContract.View {
+
+    @Inject
+    lateinit var eventHelper: EventHelper
 
     override val layoutId: Int = R.layout.activity_main
 

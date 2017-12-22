@@ -11,7 +11,6 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import org.greenrobot.eventbus.EventBus
 import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
-import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>(
@@ -26,9 +25,6 @@ abstract class BaseActivity<P : BaseContract.Presenter>(
 
     @Inject
     lateinit var eventBus: EventBus
-
-    @Inject
-    lateinit var eventHelper: EventHelper
 
     abstract val layoutId: Int
 
