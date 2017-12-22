@@ -14,4 +14,8 @@ class MainActivityPresenter(
     }
 
     override fun clear() = Unit
+
+    override fun eventNavigateToSecond() {
+        router.navigateToSecondScreen()
+    }
 }

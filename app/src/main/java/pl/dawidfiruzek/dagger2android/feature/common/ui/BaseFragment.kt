@@ -13,8 +13,7 @@ import dagger.android.support.AndroidSupportInjection
 import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 import javax.inject.Inject
 
-abstract class BaseFragment<P : BaseContract.Presenter>
-    : Fragment(), BaseContract.View {
+abstract class BaseFragment<P : BaseContract.Presenter> : Fragment(), BaseContract.View {
 
     @Inject
     lateinit var presenter: P

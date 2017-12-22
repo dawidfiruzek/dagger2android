@@ -10,5 +10,7 @@ interface SecondActivityContract {
 
     interface Router : BaseContract.Router, SecondFragmentContract.Router
 
-    interface Presenter : BaseContract.Presenter
+    interface Presenter : BaseContract.Presenter {
+        fun eventNavigateToMain()
+    }
 }

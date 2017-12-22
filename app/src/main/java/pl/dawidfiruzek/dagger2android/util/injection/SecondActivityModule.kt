@@ -20,8 +20,8 @@ class SecondActivityModule {
             SecondActivityRouter(activity)
 
     @Provides
-    fun eventHelper(router: SecondActivityContract.Router): EventHelper =
-            SecondActivityEventHelper(router)
+    fun eventHelper(presenter: SecondActivityContract.Presenter): EventHelper =
+            SecondActivityEventHelper(presenter)
 
     @Provides
     fun presenter(view: SecondActivityContract.View, router: SecondActivityContract.Router): SecondActivityContract.Presenter =

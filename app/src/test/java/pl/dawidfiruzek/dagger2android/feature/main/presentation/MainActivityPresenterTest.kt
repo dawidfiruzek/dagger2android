@@ -37,4 +37,11 @@ class MainActivityPresenterTest : BaseTest() {
     fun `should do nothing after clear is called`() {
         presenter.clear()
     }
+
+    @Test
+    fun `should navigate to second after eventNavigateToSecond is called`() {
+        presenter.eventNavigateToSecond()
+
+        verify(router, times(1)).navigateToSecondScreen()
+    }
 }

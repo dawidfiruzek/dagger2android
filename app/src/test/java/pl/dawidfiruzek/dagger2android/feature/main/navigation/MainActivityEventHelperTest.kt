@@ -13,27 +13,27 @@ import pl.dawidfiruzek.dagger2android.feature.main.MainActivityContract
 class MainActivityEventHelperTest : BaseTest() {
 
     @Mock
-    private lateinit var router: MainActivityContract.Router
+    private lateinit var presenter: MainActivityContract.Presenter
 
     private lateinit var eventHelper: EventHelper
 
     override fun setup() {
         super.setup()
 
-        eventHelper = MainActivityEventHelper(router)
+        eventHelper = MainActivityEventHelper(presenter)
     }
 
     override fun tearDown() {
         super.tearDown()
 
-        verifyNoMoreInteractions(router)
+        verifyNoMoreInteractions(presenter)
     }
 
 
     @Test
-    fun `should navigate to second after it's event occur`() {
+    fun `should call presenter's eventNavigateToSecond after NAVIGATE_TO_SECOND occur`() {
         eventHelper.handleEvent(MainNavigationEvent.NAVIGATE_TO_SECOND)
 
-        verify(router, times(1)).navigateToSecondScreen()
+        verify(presenter, times(1)).eventNavigateToSecond()
     }
 }

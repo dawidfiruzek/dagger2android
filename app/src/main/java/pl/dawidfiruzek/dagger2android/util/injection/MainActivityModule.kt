@@ -24,6 +24,6 @@ class MainActivityModule {
             MainActivityPresenter(view, router)
 
     @Provides
-    fun eventHelper(router: MainActivityContract.Router): EventHelper =
-            MainActivityEventHelper(router)
+    fun eventHelper(presenter: MainActivityContract.Presenter): EventHelper =
+            MainActivityEventHelper(presenter)
 }
