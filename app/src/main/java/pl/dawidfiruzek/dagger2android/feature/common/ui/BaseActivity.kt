@@ -14,7 +14,7 @@ import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 import javax.inject.Inject
 
 abstract class BaseActivity<P : BaseContract.Presenter>(
-        private val isHandlingNavigationEvents: Boolean = false
+        private val isHandlingEvents: Boolean = false
 ) : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View {
 
     @Inject
@@ -40,7 +40,7 @@ abstract class BaseActivity<P : BaseContract.Presenter>(
     @CallSuper
     override fun onStart() {
         super.onStart()
-        if (isHandlingNavigationEvents) {
+        if (isHandlingEvents) {
             eventBus.register(this)
         }
     }
@@ -48,7 +48,7 @@ abstract class BaseActivity<P : BaseContract.Presenter>(
     @CallSuper
     override fun onStop() {
         super.onStop()
-        if (isHandlingNavigationEvents) {
+        if (isHandlingEvents) {
             eventBus.unregister(this)
         }
     }
