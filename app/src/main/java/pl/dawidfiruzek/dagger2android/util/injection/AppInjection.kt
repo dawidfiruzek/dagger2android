@@ -55,9 +55,11 @@ abstract class ActivityBuilderModule {
     @Binds
     abstract fun activity(activity: AppCompatActivity): AppCompatActivity
 
+    @MainActivityScope
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     abstract fun bindMainActivity(): MainActivity
 
+    @SecondActivityScope
     @ContributesAndroidInjector(modules = [SecondActivityModule::class])
     abstract fun bindSecondActivity(): SecondActivity
 }
