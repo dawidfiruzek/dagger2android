@@ -14,8 +14,9 @@ import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 import pl.dawidfiruzek.dagger2android.util.tools.EventHelper
 import javax.inject.Inject
 
-abstract class BaseActivity<P : BaseContract.Presenter>(private val isHandlingNavigationEvents: Boolean = false)
-    : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View {
+abstract class BaseActivity<P : BaseContract.Presenter>(
+        private val isHandlingNavigationEvents: Boolean = false
+) : AppCompatActivity(), HasSupportFragmentInjector, BaseContract.View {
 
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
