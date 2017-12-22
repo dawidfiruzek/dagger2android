@@ -11,8 +11,7 @@ import javax.inject.Inject
 
 class SecondActivity : BaseActivity<SecondActivityContract.Presenter>(true), SecondActivityContract.View {
 
-    @Inject
-    lateinit var eventHelper: EventHelper
+    @Inject lateinit var eventHelper: EventHelper
 
     override val layoutId: Int = R.layout.activity_second
 

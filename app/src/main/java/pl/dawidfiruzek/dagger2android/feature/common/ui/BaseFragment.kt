@@ -15,8 +15,7 @@ import javax.inject.Inject
 
 abstract class BaseFragment<P : BaseContract.Presenter> : Fragment() {
 
-    @Inject
-    lateinit var presenter: P
+    @Inject lateinit var presenter: P
 
     abstract val layoutId: Int
 

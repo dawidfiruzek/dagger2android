@@ -17,14 +17,9 @@ abstract class BaseActivity<P : BaseContract.Presenter>(
         private val isHandlingEvents: Boolean = false
 ) : AppCompatActivity(), HasSupportFragmentInjector {
 
-    @Inject
-    lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
-
-    @Inject
-    lateinit var presenter: P
-
-    @Inject
-    lateinit var eventBus: EventBus
+    @Inject lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
+    @Inject lateinit var presenter: P
+    @Inject lateinit var eventBus: EventBus
 
     abstract val layoutId: Int
 
