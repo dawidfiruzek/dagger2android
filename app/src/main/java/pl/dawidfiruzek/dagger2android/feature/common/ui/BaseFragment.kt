@@ -27,7 +27,6 @@ abstract class BaseFragment<P : BaseContract.Presenter> : Fragment() {
         super.onAttach(context)
     }
 
-    @CallSuper
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(layoutId, container, false)
         unbinder = ButterKnife.bind(this, view)

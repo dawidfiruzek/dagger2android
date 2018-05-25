@@ -12,13 +12,10 @@ import pl.dawidfiruzek.dagger2android.feature.main.ui.MainFragment
 class MainFragmentModule {
 
     @Provides
-    fun view(fragment: MainFragment): MainFragmentContract.View = fragment
-
-    @Provides
     fun router(eventBus: EventBus): MainFragmentContract.Router =
             MainFragmentRouter(eventBus)
 
     @Provides
-    fun presenter(view: MainFragmentContract.View, router: MainFragmentContract.Router): MainFragmentContract.Presenter =
-            MainFragmentPresenter(view, router)
+    fun presenter(router: MainFragmentContract.Router): MainFragmentContract.Presenter =
+            MainFragmentPresenter(router)
 }

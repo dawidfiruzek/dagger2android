@@ -1,16 +1,21 @@
 package pl.dawidfiruzek.dagger2android.feature.main.ui
 
-import butterknife.OnClick
-import pl.dawidfiruzek.dagger2android.R
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import pl.dawidfiruzek.dagger2android.databinding.FragmentMainBinding
 import pl.dawidfiruzek.dagger2android.feature.common.ui.BaseFragment
 import pl.dawidfiruzek.dagger2android.feature.main.MainFragmentContract
 
-class MainFragment : BaseFragment<MainFragmentContract.Presenter>(), MainFragmentContract.View {
+class MainFragment : BaseFragment<MainFragmentContract.Presenter>() {
 
-    override val layoutId: Int = R.layout.fragment_main
+    override val layoutId: Int = 0
+    private lateinit var binding: FragmentMainBinding
 
-    @OnClick(R.id.fragment_main_button_navigate)
-    fun navigateClicked() {
-        presenter.navigateClicked()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        binding = FragmentMainBinding.inflate(inflater, container, false)
+        binding.presenter = presenter
+        return binding.root
     }
 }
