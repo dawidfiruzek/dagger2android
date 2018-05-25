@@ -1,6 +1,5 @@
 package pl.dawidfiruzek.dagger2android.feature.main
 
-import android.view.View
 import pl.dawidfiruzek.dagger2android.feature.common.BaseContract
 
 interface MainFragmentContract {
@@ -10,6 +9,6 @@ interface MainFragmentContract {
     }
 
     interface Presenter : BaseContract.Presenter {
-        fun navigateClicked(view: View)
+        fun navigateClicked()
     }
 }

@@ -32,7 +32,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:text="Navigate to second"
-            android:onClick="@{presenter::navigateClicked}"
+            android:onClick="@{() -> presenter.navigateClicked()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
